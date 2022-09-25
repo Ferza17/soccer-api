@@ -23,11 +23,11 @@ soccer-api.postman_collection.json
 
 <h3>TEST Soccer-API</h3>
 Please Follow The step : <br />
-- hit endpoint __Create Player__
-- hit endpoint __Create Team__
-- hit endpoint __Add Player to team__
+- hit endpoint __Create Player__  <br />
+- hit endpoint __Create Team__ <br />
+- hit endpoint __Add Player to team__ <br />
 - hit endpoint __Find players__ or hit endpoint __Find player__   <br />
-    *Note it can be free players or team's player, depends on your input <b>isFreePlayer</b>
+    *Note it can be free players or team's player, depends on your input __isFreePlayer__
 
 <h3>run unit test</h3>
 - open terminal
