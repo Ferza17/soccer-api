@@ -1,0 +1,22 @@
+input createTeam {
+    name: String!
+    city: String!
+    country: String!
+}
+
+input createPlayer {
+    name: String!
+    number: Int!
+    country: String!
+}
+
+input addPlayerToTeam {
+    teamId: String!
+    playerIds: [String!]!
+}
+
+type Mutation {
+    createTeam(input: createTeam!):Team!
+    createPlayer(input: createPlayer!):Player!
+    addPlayerToTeam(input: addPlayerToTeam!):Team!
+}

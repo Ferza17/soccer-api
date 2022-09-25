@@ -1,0 +1,764 @@
+{
+	"info": {
+		"_postman_id": "c788aeae-7fb6-481d-b9b3-1c02b33347c2",
+		"name": "soccer-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7137943"
+	},
+	"item": [
+		{
+			"name": "player",
+			"item": [
+				{
+					"name": "create Player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\n  createPlayer(input:{\n    name: \"Jadon Sancho\",\n    number: 25,\n    country: \"England\"\n  }) {\n    id\n    name\n    number\n    country\n    createdAt\n    updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create Player",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation{\n  createPlayer(input:{\n    name: \"Jadon Sancho\",\n    number: 25,\n    country: \"England\"\n  }) {\n    id\n    name\n    number\n    country\n    createdAt\n    updatedAt\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:48:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"createPlayer\": {\n            \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n            \"name\": \"Jadon Sancho\",\n            \"number\": 25,\n            \"country\": \"England\",\n            \"createdAt\": 1664030900,\n            \"updatedAt\": 1664030900\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "find Player no team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\n    findPlayer(input: {\n        id: \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n        isFreePlayer: true\n    }) {\n        id\n        name\n        number\n        country\n        createdAt\n        updatedAt\n    }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find Player no team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\n    findPlayer(input: {\n        id: \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n        isFreePlayer: true\n    }) {\n        id\n        name\n        number\n        country\n        createdAt\n        updatedAt\n    }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:52:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"findPlayer\": {\n            \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n            \"name\": \"Jadon Sancho\",\n            \"number\": 25,\n            \"country\": \"England\",\n            \"createdAt\": 1664030900,\n            \"updatedAt\": 1664030900\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "find Player in team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\n    findPlayer(input: {\n        id: \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n        isFreePlayer: false\n    }) {\n        id\n        name\n        number\n        country\n        createdAt\n        updatedAt\n    }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find Player in team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\n    findPlayer(input: {\n        id: \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n        isFreePlayer: false\n    }) {\n        id\n        name\n        number\n        country\n        createdAt\n        updatedAt\n    }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:58:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"findPlayer\": {\n            \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n            \"name\": \"Jadon Sancho\",\n            \"number\": 25,\n            \"country\": \"England\",\n            \"createdAt\": 1664030900,\n            \"updatedAt\": 1664030900\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "find Players no team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\n  findPlayers(input:{\n    ids: [],\n    isFreePlayer:true\n  }) {\n    id\n    name\n    number\n    country\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find Players no team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\n  findPlayers(input:{\n    ids: [],\n    isFreePlayer:true\n  }) {\n    id\n    name\n    number\n    country\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:49:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "223"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"findPlayers\": [\n            {\n                \"id\": \"1ef835e7-4e17-4434-a111-25188f32ff88\",\n                \"name\": \"David De Gea\",\n                \"number\": 1,\n                \"country\": \"Spain\"\n            },\n            {\n                \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n                \"name\": \"Jadon Sancho\",\n                \"number\": 25,\n                \"country\": \"England\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "find Players in team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\n  findPlayers(input:{\n    ids: [],\n    isFreePlayer:false\n  }) {\n    id\n    name\n    number\n    country\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find Players in team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\n  findPlayers(input:{\n    ids: [],\n    isFreePlayer:false\n  }) {\n    id\n    name\n    number\n    country\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:58:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"findPlayers\": [\n            {\n                \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n                \"name\": \"Jadon Sancho\",\n                \"number\": 25,\n                \"country\": \"England\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "team",
+			"item": [
+				{
+					"name": "create Team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\n  createTeam(input:{\n    name: \"Manchester United\",\n    city: \"Machester\",\n    country: \"England\"\n  }) {\n    id\n    name\n    city\n    country\n    country\n    createdAt\n    updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create Team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation{\n  createTeam(input:{\n    name: \"Manchester United\",\n    city: \"Machester\",\n    country: \"England\"\n  }) {\n    id\n    name\n    city\n    country\n    country\n    createdAt\n    updatedAt\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:54:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"createTeam\": {\n            \"id\": \"fe282f13-5419-4e10-8353-ea3a52c620ec\",\n            \"name\": \"Manchester United\",\n            \"city\": \"Machester\",\n            \"country\": \"England\",\n            \"createdAt\": 1664031251,\n            \"updatedAt\": 1664031251\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "find team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\n    findTeam(input: {\n        id: \"fe282f13-5419-4e10-8353-ea3a52c620ec\"\n    }){\n        id\n        name\n        city\n        country\n        players{\n            id\n            name\n            number\n            country\n            createdAt\n            updatedAt\n        }\n        createdAt\n        updatedAt\n    }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query{\n    findTeam(input: {\n        id: \"fe282f13-5419-4e10-8353-ea3a52c620ec\"\n    }){\n        id\n        name\n        city\n        country\n        players{\n            id\n            name\n            number\n            country\n            createdAt\n            updatedAt\n        }\n        createdAt\n        updatedAt\n    }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:59:05 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "337"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"findTeam\": {\n            \"id\": \"fe282f13-5419-4e10-8353-ea3a52c620ec\",\n            \"name\": \"Manchester United\",\n            \"city\": \"Machester\",\n            \"country\": \"England\",\n            \"players\": [\n                {\n                    \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n                    \"name\": \"Jadon Sancho\",\n                    \"number\": 25,\n                    \"country\": \"England\",\n                    \"createdAt\": 1664030900,\n                    \"updatedAt\": 1664030900\n                }\n            ],\n            \"createdAt\": 1664031251,\n            \"updatedAt\": 1664031251\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add player to team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\n  addPlayerToTeam(input:{\n    teamId:\"fe282f13-5419-4e10-8353-ea3a52c620ec\",\n    playerIds:[\"9ee600ba-2a9e-43cf-8781-124f55e7f830\"]\n  }){\n    id\n    name\n    city\n    country\n    players{\n      id\n      name\n      number\n      country\n    }\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/query",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"query"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add player to team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "mutation{\n  addPlayerToTeam(input:{\n    teamId:\"fe282f13-5419-4e10-8353-ea3a52c620ec\",\n    playerIds:[\"9ee600ba-2a9e-43cf-8781-124f55e7f830\"]\n  }){\n    id\n    name\n    city\n    country\n    players{\n      id\n      name\n      number\n      country\n    }\n  }\n}",
+										"variables": ""
+									}
+								},
+								"url": {
+									"raw": "localhost:4000/api/v1/query",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"v1",
+										"query"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, no-transform, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 1970 07:00:00 WIB"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Accel-Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Sep 2022 14:57:45 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"addPlayerToTeam\": {\n            \"id\": \"fe282f13-5419-4e10-8353-ea3a52c620ec\",\n            \"name\": \"Manchester United\",\n            \"city\": \"Machester\",\n            \"country\": \"England\",\n            \"players\": [\n                {\n                    \"id\": \"9ee600ba-2a9e-43cf-8781-124f55e7f830\",\n                    \"name\": \"Jadon Sancho\",\n                    \"number\": 25,\n                    \"country\": \"England\"\n                }\n            ]\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

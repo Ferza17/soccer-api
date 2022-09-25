@@ -1,0 +1,26 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Team {
+    id: String!
+    name: String!
+    city: String!
+    country: String!
+    players: [Player!]!
+    createdAt: Int!
+    updatedAt: Int!
+}
+
+type mapPlayer {
+    id : Player!
+}
+
+type Player {
+    id: String!
+    name: String!
+    number: Int!
+    country: String!
+    createdAt: Int!
+    updatedAt: Int!
+}

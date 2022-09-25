@@ -1,0 +1,24 @@
+input findTeamsInputArgs {
+    ids: [String!]!
+}
+
+input findTeamInputArgs {
+    id: String!
+}
+
+input findPlayersInputArgs {
+    ids: [String!]!
+    isFreePlayer: Boolean!
+}
+
+input findPlayerInputArgs {
+    id: String!
+    isFreePlayer: Boolean!
+}
+
+type Query {
+    findTeams(input: findTeamsInputArgs!):[Team!]!
+    findTeam(input: findTeamInputArgs!):Team!
+    findPlayers(input: findPlayersInputArgs!):[Player!]!
+    findPlayer(input: findPlayerInputArgs!):Player!
+}
